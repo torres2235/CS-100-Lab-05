@@ -14,6 +14,11 @@ class ListContainer : public Container {
 		Sort* containers;
 	public:
 		ListContainer() { };
+
+		void set_sort_function(Sort* sort_function) {
+			containers = sort_function;
+		}
+
 		virtual void add_element(Base* newElement) {
 			userList.push_back(newElement);
 		}
