@@ -5,7 +5,7 @@
 #include "lab-04/base.hpp"
 #include "sort.hpp"
 #include <vector>
-
+#include <iostream>
 using namespace std;
 
 class VectorContainer: public Container {
