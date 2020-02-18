@@ -36,8 +36,7 @@ TEST(SortTestSet, BubbleSortTestVector) {
 	EXPECT_EQ(container->at(1)->evaluate(), 5);
 	EXPECT_EQ(container->at(2)->evaluate(), 4);
 
-	Sort* bubble = new bubbleSort();
-	container->set_sort_function(bubble);
+	container->set_sort_function(new BubbleSort());
 	container->sort();
 
 	ASSERT_EQ(container->size(), 3);

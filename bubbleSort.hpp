@@ -8,9 +8,9 @@
 
 using namespace std;
 
-class bubbleSort : public Sort {
+class BubbleSort : public Sort {
 	public:
-		bubbleSort() : Sort()  {};
+		BubbleSort() {};
 
 		virtual void sort(Container* container) {
 			bool swap = false;
