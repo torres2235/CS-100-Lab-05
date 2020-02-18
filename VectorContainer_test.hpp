@@ -24,4 +24,32 @@ TEST(VectorContainerTest, AddElement) {
 	EXPECT_EQ(tester->at(0)->evaluate(), 1);
 }
 
+TEST(VectorContainerTest, PrintTest) {
+	Op* one = new Op(1);
+	Op* two = new Op(2);
+	VectorContainer* tester = new VectorContainer();
+
+	tester->add_element(one);
+	tester->add_element(two);
+
+	tester->print();
+
+	ASSERT_EQ(tester->size(), 2);
+	EXPECT_EQ(tester->at(0)->evaluate(), 1);
+	EXPECT_EQ(tester->at(1)->evaluate(), 2);
+}
+
+TEST(VectorContainerTest, SwapTest) {
+	Op* one = new Op(1);
+        Op* two = new Op(2);
+        VectorContainer* tester = new VectorContainer();
+
+        tester->add_element(one);
+        tester->add_element(two);
+
+        tester->swap(0,1);
+
+	EXPECT_EQ(tester->at(0)->evaluate(), 2);
+}
+
 #endif // __VECTORCONTAINER_TEST_HPP__
