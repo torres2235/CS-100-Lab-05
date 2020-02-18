@@ -24,4 +24,17 @@ TEST(ListContainerTest, AddElement) {
 	EXPECT_EQ(tester->at(0)->evaluate(), 1);
 }
 
+TEST(ListContainerTest, SwapTest) {
+	Op* one = new Op(1);
+        Op* two = new Op(2);
+        ListContainer* tester = new ListContainer();
+
+        tester->add_element(one);
+        tester->add_element(two);
+
+        tester->swap(0,1);
+
+	EXPECT_EQ(tester->at(0)->evaluate(), 2);
+}
+
 #endif //__LISTCONTAINER_TEST_HPP__

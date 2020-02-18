@@ -36,7 +36,7 @@ class ListContainer : public Container {
 			list<Base*>::iterator temp2 = userList.begin();
 			advance(temp2, j);
 	
-			//swap(*temp1, *temp2);
+			std::swap(*temp1, *temp2);
 		}
 
 		virtual Base* at(int i) { 
